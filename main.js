@@ -119,10 +119,9 @@ for (const key in product3) {
 
 //Cau 10
 console.log("\n-----======= CAU 10 =======-----");
-let isSale = arrayProduct.map(
+let isOnSale = arrayProduct.filter(
     function(e){
-        if (e.quantity > 0 && e.isAvailable == true){
-            return console.log(e);
-        }
-    },0
+        return e.quantity > 0 && e.isAvailable == true;
+    }
 )
+console.log(isOnSale);
